@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SmartPredict AI</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            /*background-image: url('imagen3.png');*/
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: rgb(235, 185, 239);
+        }
+
+        header {
+            background: rgba(16, 203, 228, 0.7);
+            padding: 20px;
+            text-align: center;
+        }
+
+
+
+        nav {
+            background: rgba(218, 237, 11, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: rgb(193, 13, 200);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background: rgba(194, 136, 11, 0.6);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        aside {
+            background: rgba(0,0,0,0.8);
+            margin: 20px;
+            padding: 20px;
+            border-left: 5px solid yellow;
+        }
+
+        footer {
+            background: black;
+            text-align: center;
+            padding: 15px;
+        }
+
+        h1 {
+            color: rgb(215, 238, 8);
+        }
+
+        h2 {
+            color: rgb(30, 15, 233);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+
+        /* codigo del selloDC */
+    .sello-dc {
+        width: 180px;
+        height: 180px;
+        margin: 20px auto;
+        border-radius: 50%;
+        border: 3px solid #00e5ff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle, #0f172a, #020617);
+        box-shadow: 0 0 50px #00e5ff, 0 0 40px #0ea5e9;
+        color: rgb(206, 8, 8);
+        text-align: center;
+    }
+
+    .sello-dc span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00e5ff;
+    text-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #00e5ff;
+    letter-spacing: 4px;
+}
+
+.sello-dc p {
+    margin: 5px 0;
+    color: white;
+    font-size: 0.85rem;
+}
+
+    .titulo-sello {
+    color: #0bbced;
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: 0 0 8px #00e5ff;
+}
+
+.subtitulo-sello {
+    color: #df1634;
+    font-size: 0.75rem;
+    text-shadow: 0 0 5px #ea1722;
+}
+
+    .rojo-sello {
+    color: #ff3b3b;
+    font-weight: bold;
+    text-shadow: 0 0 8px #ff3b3b;
+}
+
+.verde-neon {
+    color: #2aee07;
+    font-weight: bold;
+    text-shadow: 0 0 8px #39ff14;
+}
+     
+
+    .frase {
+      font-size: 1.2rem;
+      font-weight: bold;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .autor {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      text-align: right;
+      font-style: italic;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .destacados {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+
+.card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+    color: white;
+    text-align: center;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 40px rgba(0, 229, 255, 0.7);
+}
+
+.card h3 {
+    color: #00e5ff;
+}
+
+.frase-card p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.frase-card span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.video-card iframe {
+    width:100%;
+    height: 110px;
+    border-radius: 10px;
+}
+    
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>SmartPredict AI</h1>
+        <p>Sistema inteligente de predicción de fallas industriales</p>
+    </header>
+
+    <!--  SELLO PERSONAL DC -->
+   <div class="sello-dc">
+    <span>DC</span>
+
+    <p class="titulo-sello">Smart Engineering</p>
+<p class="subtitulo-sello">AI • Automation • Innovation</p>
+</div>
+
+    <!-- FRASE + VIDEO DESTACADOS -->
+<div class="destacados">
+
+    <!-- FRASE -->
+    <div class="card frase-card">
+        <h3> “Los sueños no mueren cuando muere 
+            el soñador, porque la innovación y 
+            el conocimiento los mantienen vivos 
+            en las ideas que deja.”</h3>
+        
+        <span> DIEGO CHITUPANTA</span>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="card video-card">
+        <h3>🎥 mi vida</h3>
+
+        <iframe
+    width="300"
+    height="170"
+    src="https://www.youtube.com/embed/Lp3yrYUs3Fs"
+    title="Video de YouTube"
+    allowfullscreen>
+</iframe>
+    </div>
+
+</div>
+    
+
+    <!-- NAV -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#quienes">Quiénes Somos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <main>
+
+        <!-- INICIO -->
+        <section id="Inicio">
+            <h2>Inicio</h2>
+            <p>
+                Bienvenido a SmartPredict AI, una solución
+                de inteligencia artificial enfocada en el 
+                mantenimiento predictivo industrial. A 
+                través del análisis de datos en tiempo real
+                provenientes de sensores inteligentes, la 
+                plataforma anticipa fallas en maquinaria, 
+                optimiza procesos de mantenimiento y reduce 
+                significativamente los tiempos de inactividad
+                y los costos operativos.
+            </p>
+        </section>
+
+        <!-- QUIÉNES SOMOS -->
+        <section id="quienes">
+            <h2>Quiénes Somos</h2>
+
+            <p>
+                SmartPredict AI es un proyecto académico enfocado en el desarrollo de una solución tecnológica
+                que permite anticipar fallas en maquinaria industrial mediante el análisis de datos en tiempo real.
+                Utilizamos sensores inteligentes e inteligencia artificial para procesar información y generar
+                predicciones que ayudan a prevenir fallos críticos. Este sistema busca mejorar la productividad,
+                reducir tiempos de inactividad y optimizar el mantenimiento en entornos industriales modernos.
+                Es una propuesta innovadora orientada a la transformación digital de la industria.
+            </p>
+            <div style="position: relative; width: 700px; margin: auto;"></div>    
+            
+        <iframe
+            width="700"
+            height="400"
+            src="https://www.youtube.com/embed/7zXE6A4H_uE"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+        
+
+        <!-- Imagen encima -->
+        <img src="imagen1.jpg"
+         alt="SmartPredict AI"
+         style="
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 120px;
+            height: auto;
+            z-index: 10;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+         ">
+
+</div>
+
+            <h3>SmartPredict AI: Mantenimiento Predictivo con Inteligencia Artificial</h3>
+
+            <p>
+                Sistema basado en sensores inteligentes e inteligencia artificial para anticipar
+                fallas en maquinaria industrial y optimizar el mantenimiento.
+            </p>
+            
+            
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios">
+            <h2>Servicios o Productos</h2>
+
+            <ul>
+                <li>Monitoreo de maquinaria en tiempo real</li>
+                <li>Predicción de fallas con inteligencia artificial</li>
+                <li>Alertas automáticas de mantenimiento</li>
+                <li>Análisis de datos industriales</li>
+                <li>Detección temprana de anomalías</li>
+                <li>Optimización de planes de mantenimiento</li>
+                <li>Generación de reportes y estadísticas</li>
+                <li>Monitoreo de sensores IoT</li>
+                <li>Reducción de tiempos de inactividad</li>
+                <li>Visualización de datos mediante paneles interactivos</li>
+                <li>Seguimiento del estado de equipos críticos</li>
+                <li>Análisis predictivo del rendimiento de maquinaria</li>
+                <li>Integración con sistemas de gestión industrial</li>
+                <li>Notificaciones en tiempo real para operadores y técnicos</li>
+                <li>Apoyo a la toma de decisiones basada en datos</li>
+            </ul>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+
+            <p>Email: smartpredictai@email.com</p>
+            <p>Teléfono: +593 999 999 999</p>
+            <p>Dirección: Ecuador</p>
+
+            <p>
+                Redes sociales:
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">LinkedIn</a>
+            </p>
+
+            <h3>Video relacionado</h3>
+
+            <iframe src="https://www.youtube.com/embed/LG3qdrJcxII"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <!-- ASIDE -->
+        <aside>
+            <h3>Información adicional</h3>
+            <p>
+                Proyecto en desarrollo académico. Próximamente integración con IoT y sensores reales para pruebas industriales.
+            </p>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Desarrollado por: Diego Chitupanta</p>
+        <p>Desarrollo de Aplicaciones Web</p>
+        <p>2026 - 2026</p>
+        <p>“Quien apostó por mí, que vaya buscando
+            su boleto… este año me la rifo.”</p>
+
+    </footer>
+
+</body>
+
+</html>
+
