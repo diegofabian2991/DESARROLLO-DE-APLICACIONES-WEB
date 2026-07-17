@@ -279,6 +279,19 @@ formulario.addEventListener("submit", function (event) {
 
     // Guardar en el arreglo
 
+
+const spinner=document.getElementById("spinner");
+
+spinner.classList.remove("d-none");
+
+
+setTimeout(()=>{
+
+spinner.classList.add("d-none");
+
+},1000);
+
+
     registros.push(nuevoRegistro);
 
     mensaje.innerHTML = `
