@@ -1,0 +1,781 @@
+/* ==========================================================
+   SMARTPREDICT AI
+   PROYECTO INTEGRADOR
+   DESARROLLO DE APLICACIONES WEB
+   SEMANA 7
+   Preparado para futura integración con Flask
+========================================================== */
+
+
+/* ==========================================================
+   ESTILOS GENERALES
+========================================================== */
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin:0;
+
+    background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
+
+    color:#eaeaea;
+
+    line-height:1.6;
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header{
+
+    margin-bottom:20px;
+
+}
+
+
+/* ==========================================================
+   TÍTULO PRINCIPAL
+========================================================== */
+
+h1{
+
+    background:rgb(202,18,177);
+
+    color:rgb(177,181,129);
+
+    font-size:2.5rem;
+
+    text-align:center;
+
+    padding:12px;
+
+    margin:0;
+
+}
+
+
+/* ==========================================================
+   PÁRRAFO INICIAL
+========================================================== */
+
+.parrafo-inicial::first-letter{
+
+    font-size:2em;
+
+    font-weight:bold;
+
+    color:#b81717;
+
+}
+
+
+/* ==========================================================
+   SECCIONES
+========================================================== */
+
+section{
+
+    background:rgba(0,0,0,.35);
+
+    margin:20px 0;
+
+    padding:25px;
+
+    border-radius:10px;
+
+}
+
+
+/* ==========================================================
+   BOTÓN PERSONALIZADO
+========================================================== */
+
+.btn-custom{
+
+    background:rgb(45,160,146);
+
+    color:white;
+
+    padding:10px 15px;
+
+    border:none;
+
+    border-radius:5px;
+
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.grid-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+}
+
+
+.grid-item{
+
+    background:#2196f3;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:5px;
+
+    text-align:center;
+
+}
+
+
+/* ==========================================================
+   SELLO SMART ENGINEERING
+========================================================== */
+
+.sello-dc{
+
+    width:180px;
+
+    height:180px;
+
+    margin:20px auto;
+
+    border-radius:50%;
+
+    border:3px solid #00e5ff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:radial-gradient(circle,#0f172a,#020617);
+
+    box-shadow:0 0 50px #00e5ff;
+
+}
+
+.titulo-sello{
+
+    font-weight:bold;
+
+    margin-top:10px;
+
+}
+
+.subtitulo-sello{
+
+    font-size:.75rem;
+
+    text-align:center;
+
+}
+
+/* ==========================================================
+   DESTACADOS
+========================================================== */
+
+.destacados{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.destacados .card{
+
+    width:350px;
+
+    border:none;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.destacados .card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/* ==========================================================
+   TARJETAS DE SERVICIOS
+========================================================== */
+
+.card-servicio{
+
+    background:rgba(0,0,0,.70);
+
+    color:white;
+
+}
+
+
+/* ==========================================================
+   IMÁGENES Y VIDEOS
+========================================================== */
+
+img{
+
+    max-width:100%;
+
+    border-radius:10px;
+
+}
+
+iframe{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:10px;
+
+}
+
+
+/* ==========================================================
+   FORMULARIO DE REGISTRO
+========================================================== */
+
+#formRegistro{
+
+    background:rgba(255,255,255,.05);
+
+    padding:25px;
+
+    border-radius:12px;
+
+    margin-top:25px;
+
+}
+
+
+/* ==========================================================
+   SECCIÓN DE REGISTROS DINÁMICOS
+========================================================== */
+
+#gestionRegistros{
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+
+/* ==========================================================
+   MENSAJE GENERAL
+========================================================== */
+
+#mensaje{
+
+    min-height:60px;
+
+}
+
+
+/* ==========================================================
+   CONTADOR
+========================================================== */
+
+#contador{
+
+    color:#00e5ff;
+
+    font-size:1.3rem;
+
+    font-weight:bold;
+
+}
+
+
+/* ==========================================================
+   TARJETAS CREADAS POR JAVASCRIPT
+========================================================== */
+
+#listaRegistros .card{
+
+    margin-bottom:20px;
+
+    border:none;
+
+    transition:.3s;
+
+}
+
+
+#listaRegistros .card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/* ==========================================================
+   BOTÓN ELIMINAR
+========================================================== */
+
+#listaRegistros button{
+
+    margin-top:12px;
+
+}
+
+/* ==========================================================
+   INFORMACIÓN ADICIONAL (ASIDE)
+========================================================== */
+
+aside{
+
+    margin-top:30px;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    margin-top:35px;
+
+}
+
+
+/* ==========================================================
+   MENSAJES DE VALIDACIÓN
+========================================================== */
+
+#errorNombre,
+#errorDescripcion,
+#errorCategoria{
+
+    font-size:.9rem;
+
+    margin-top:5px;
+
+}
+
+
+/* ==========================================================
+   CAMPOS VÁLIDOS E INVÁLIDOS
+========================================================== */
+
+.is-valid{
+
+    transition:.3s;
+
+}
+
+.is-invalid{
+
+    transition:.3s;
+
+}
+
+
+/* ==========================================================
+   EFECTOS GENERALES
+========================================================== */
+
+.card{
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .destacados{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .destacados .card{
+
+        width:100%;
+
+    }
+
+    .grid-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    section{
+
+        padding:15px;
+
+    }
+
+    h1{
+
+        font-size:2rem;
+
+    }
+
+    #formRegistro{
+
+        padding:18px;
+
+    }
+
+    .sello-dc{
+
+        width:150px;
+
+        height:150px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   FIN DEL ARCHIVO
+   Proyecto preparado para futura integración con Flask
+========================================================== */
+
+
+/* ==========================================================
+   MEJORAS SEMANA 8 - BOOTSTRAP
+   SMARTPREDICT AI
+========================================================== */
+
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.navbar{
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.navbar-brand{
+
+    letter-spacing:1px;
+
+}
+
+
+/* ==========================================================
+   TITULO PRINCIPAL
+========================================================== */
+
+header h1{
+
+    text-shadow:
+    0 0 15px #00e5ff;
+
+}
+
+
+/* ==========================================================
+   SECCIONES BOOTSTRAP
+========================================================== */
+
+section{
+
+    transition:.3s ease;
+
+}
+
+
+section:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* ==========================================================
+   CARDS BOOTSTRAP
+========================================================== */
+
+.card{
+
+    background:
+    rgba(0,0,0,.65);
+
+    color:white;
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+}
+
+
+.card-title{
+
+    color:#00e5ff;
+
+    font-weight:bold;
+
+}
+
+
+.card:hover{
+
+    box-shadow:
+
+    0 0 20px rgba(0,229,255,.4);
+
+}
+
+
+
+/* ==========================================================
+   BOTONES
+========================================================== */
+
+
+.btn{
+
+    transition:.3s;
+
+}
+
+
+.btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/* ==========================================================
+   FORMULARIO
+========================================================== */
+
+.form-control,
+.form-select{
+
+
+    background:
+
+    rgba(255,255,255,.1);
+
+
+    color:white;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.3);
+
+}
+
+
+
+.form-control:focus,
+.form-select:focus{
+
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+    color:white;
+
+
+    border-color:#00e5ff;
+
+
+    box-shadow:
+
+    0 0 10px rgba(0,229,255,.5);
+
+}
+
+
+
+/* opciones del select */
+
+.form-select option{
+
+    color:black;
+
+}
+
+
+
+/* ==========================================================
+   SPINNER
+========================================================== */
+
+#spinnerCarga{
+
+    color:white;
+
+}
+
+
+.spinner-border{
+
+    width:3rem;
+
+    height:3rem;
+
+}
+
+
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+
+.modal-content{
+
+
+    background:
+
+    #0f172a;
+
+
+    color:white;
+
+
+    border:
+
+    1px solid #00e5ff;
+
+}
+
+
+.modal-header{
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.2);
+
+}
+
+
+.modal-footer{
+
+    border-top:
+
+    1px solid rgba(255,255,255,.2);
+
+}
+
+
+
+/* ==========================================================
+   REGISTROS DINÁMICOS
+========================================================== */
+
+
+#listaRegistros .card{
+
+    animation:
+
+    aparecer .5s ease;
+
+}
+
+
+
+@keyframes aparecer{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE EXTRA
+========================================================== */
+
+
+@media(max-width:576px){
+
+
+    header h1{
+
+        font-size:2rem;
+
+    }
+
+
+    .sello-dc{
+
+        width:130px;
+
+        height:130px;
+
+    }
+
+
+    .btn{
+
+        width:100%;
+
+        margin-top:5px;
+
+    }
+
+
+}

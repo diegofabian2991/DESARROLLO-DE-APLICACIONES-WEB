@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}
+Productos - SmartPredict AI
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+
+    <h2 class="mb-4">Productos</h2>
+
+    <a href="{{ url_for('formulario_producto') }}" class="btn btn-primary mb-4">
+    Registrar producto
+</a>
+
+    <p class="mb-4">
+        Catálogo de productos y soluciones disponibles para
+        mantenimiento predictivo y automatización industrial.
+    </p>
+
+    <div class="row g-4">
+
+        {% for producto in productos %}
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        {{ producto.nombre|upper }}
+                    </h5>
+
+                    <p class="card-text">
+                        <strong>Categoría:</strong>
+                        {{ producto.categoria }}
+                    </p>
+
+                    <p class="card-text">
+                        <strong>Precio:</strong>
+                        ${{ "%.2f"|format(producto.precio) }}
+                    </p>
+
+                    <p class="card-text">
+                        <strong>Stock:</strong>
+                        {{ producto.stock }}
+                    </p>
+
+                    {% if producto.stock > 0 %}
+
+                        <span class="badge bg-success">
+                            Disponible
+                        </span>
+
+                    {% else %}
+
+                        <span class="badge bg-danger">
+                            Agotado
+                        </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}
