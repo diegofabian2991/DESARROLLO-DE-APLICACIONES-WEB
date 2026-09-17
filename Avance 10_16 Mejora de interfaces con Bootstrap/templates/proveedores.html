@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}
+Proveedores - SmartPredict AI
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+
+    <h2 class="mb-4">Proveedores</h2>
+
+    <p class="mb-4">
+        Registro de proveedores especializados en tecnologías,
+        sensores, conectividad y automatización industrial.
+    </p>
+
+    <div class="row g-4">
+
+        {% for proveedor in proveedores %}
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        {{ proveedor.nombre }}
+                    </h5>
+
+                    <p class="card-text">
+                        <strong>ID:</strong>
+                        {{ proveedor.id }}
+                    </p>
+
+                    <p class="card-text">
+                        <strong>Especialidad:</strong>
+                        {{ proveedor.especialidad }}
+                    </p>
+
+                    <p class="card-text">
+                        <strong>Estado:</strong>
+                        {{ proveedor.estado }}
+                    </p>
+
+                    {% if proveedor.estado == "Activo" %}
+
+                        <span class="badge bg-success">
+                            Proveedor activo
+                        </span>
+
+                    {% else %}
+
+                        <span class="badge bg-warning text-dark">
+                            Pendiente de validación
+                        </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}
