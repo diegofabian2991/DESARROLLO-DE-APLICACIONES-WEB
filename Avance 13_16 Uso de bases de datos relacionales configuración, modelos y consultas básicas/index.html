@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Responsive (IMPORTANTE PARA SEMANA 7) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartPredict AI</title>
+
+    <!-- ===================================================== -->
+    <!-- FUTURA PLANTILLA base.html                            -->
+    <!-- Esta sección contendrá los recursos compartidos        -->
+    <!-- Bootstrap + CSS + Scripts comunes del proyecto        -->
+    <!-- ===================================================== -->
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+<!-- ===================================================== -->
+<!-- FUTURA PLANTILLA base.html                            -->
+<!-- Esta plantilla contendrá la estructura principal      -->
+<!-- Header + Navbar + Main + Footer                       -->
+<!-- ===================================================== -->
+
+
+<!-- ===================================================== -->
+<!-- INICIO HEADER                                         -->
+<!-- FUTURA PLANTILLA: header.html                         -->
+<!-- Contendrá el encabezado reutilizable del proyecto     -->
+<!-- ===================================================== -->
+
+<header class="text-center py-4">
+
+    <h1>SmartPredict AI</h1>
+
+    <p class="parrafo-inicial">
+        Sistema inteligente de predicción de fallas industriales
+    </p>
+
+</header>
+
+<!-- FIN HEADER -->
+
+
+<!-- ===================================================== -->
+<!-- SECCIÓN DE PRESENTACIÓN                               -->
+<!-- Puede reutilizarse como componente informativo        -->
+<!-- ===================================================== -->
+
+<div class="sello-dc">
+
+    <span>DC</span>
+
+    <p class="titulo-sello">
+        Smart Engineering
+    </p>
+
+    <p class="subtitulo-sello">
+        AI • Automation • Innovation
+    </p>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- TARJETAS DESTACADAS                                   -->
+<!-- Información institucional del proyecto                -->
+<!-- ===================================================== -->
+
+<div class="container destacados my-4">
+
+    <div class="card p-3">
+
+        <h4>Sueños</h4>
+
+        <p>
+            "Los sueños no mueren cuando muere el soñador, porque la innovación los mantiene vivos."
+        </p>
+
+        <span>
+            Diego Chitupanta
+        </span>
+
+    </div>
+
+    <div class="card p-3">
+
+        <h4>Video Personal</h4>
+
+        <iframe
+            src="https://www.youtube.com/embed/Lp3yrYUs3Fs"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- INICIO NAVBAR                                         -->
+<!-- FUTURA PLANTILLA: navbar.html                         -->
+<!-- Barra de navegación reutilizable                      -->
+<!-- ===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            SmartPredict AI
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#quienes">Quiénes Somos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#gestionRegistros">
+                        Registros
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- FIN NAVBAR -->
+
+
+<!-- ===================================================== -->
+<!-- INICIO MAIN                                           -->
+<!-- FUTURA PLANTILLA: content.html                        -->
+<!-- Aquí Flask cargará el contenido dinámico              -->
+<!-- ===================================================== -->
+
+<main class="container my-4">
+
+<!-- ===================================================== -->
+<!-- SECCIÓN INICIO                                        -->
+<!-- ===================================================== -->
+
+<section id="inicio" class="mb-4">
+
+    <h2>Inicio</h2>
+
+    <p>
+
+        SmartPredict AI es una plataforma basada en Inteligencia Artificial que analiza información proveniente de sensores industriales para detectar comportamientos anómalos y predecir fallas antes de que ocurran. Su objetivo es apoyar el mantenimiento predictivo y aumentar la disponibilidad de los equipos.
+
+    </p>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SECCIÓN QUIÉNES SOMOS                                -->
+<!-- ===================================================== -->
+
+<section id="quienes" class="mb-4">
+
+    <h2>Quiénes Somos</h2>
+
+    <div class="row align-items-center">
+
+        <div class="col-md-6">
+
+            <p>
+
+                Somos un proyecto académico enfocado en la Industria 4.0, Internet de las Cosas (IoT), Inteligencia Artificial y Automatización Industrial, desarrollando soluciones tecnológicas para optimizar procesos mediante mantenimiento predictivo.
+
+            </p>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <img
+                src="imagen1.jpg"
+                alt="SmartPredict AI"
+                class="img-fluid rounded shadow">
+
+        </div>
+
+    </div>
+
+    <div class="mt-3">
+
+        <iframe
+            width="100%"
+            height="350"
+            src="https://www.youtube.com/embed/7zXE6A4H_uE"
+            allowfullscreen>
+
+        </iframe>
+
+    </div>
+
+    </section>
+
+<!-- ===================================================== -->
+<!-- SECCIÓN SERVICIOS                                     -->
+<!-- Esta sección podrá convertirse en un componente        -->
+<!-- reutilizable dentro de Flask                           -->
+<!-- ===================================================== -->
+
+<section id="servicios" class="mb-4">
+
+    <h2>Servicios o Productos</h2>
+
+    <div class="row g-3">
+
+        <div class="col-md-4">
+
+            <div class="card p-3 h-100">
+
+                <h5>Monitoreo en tiempo real</h5>
+
+                <p>
+                    Supervisión continua del estado de equipos industriales mediante sensores inteligentes.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card p-3 h-100">
+
+                <h5>Predicción con Inteligencia Artificial</h5>
+
+                <p>
+                    Algoritmos de IA que permiten detectar anomalías y anticipar fallas antes de que ocurran.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card p-3 h-100">
+
+                <h5>Alertas automáticas</h5>
+
+                <p>
+                    Notificaciones automáticas para ejecutar mantenimiento preventivo y reducir tiempos muertos.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- SECCIÓN DINÁMICA                                      -->
+<!-- FUTURA PLANTILLA registros.html                       -->
+<!-- Todo este contenido será alimentado por Flask         -->
+<!-- y por JavaScript                                      -->
+<!-- ===================================================== -->
+
+<section id="gestionRegistros" class="mb-4">
+
+    <h2 class="mb-4">
+        Gestión de Registros
+    </h2>
+
+    <p>
+
+        En esta sección se registran nuevos elementos del sistema SmartPredict AI.
+        Los datos son validados mediante JavaScript y posteriormente son
+        renderizados dinámicamente en tarjetas sin necesidad de escribir
+        manualmente código HTML repetitivo.
+
+    </p>
+
+    <!-- ============================================== -->
+    <!-- FORMULARIO                                     -->
+    <!-- ============================================== -->
+
+    <form id="formRegistro" class="mt-4">
+
+        <!-- Nombre -->
+
+        <div class="mb-3">
+
+            <label class="form-label">
+
+                Nombre
+
+            </label>
+
+            <input
+                type="text"
+                id="nombre"
+                class="form-control"
+                placeholder="Ingrese el nombre">
+
+            <div id="errorNombre" class="small mt-1"></div>
+
+        </div>
+
+        <!-- Descripción -->
+
+        <div class="mb-3">
+
+            <label class="form-label">
+
+                Descripción
+
+            </label>
+
+            <textarea
+                id="descripcion"
+                class="form-control"
+                rows="4"
+                placeholder="Ingrese una descripción">
+
+            </textarea>
+
+            <div id="errorDescripcion" class="small mt-1"></div>
+
+        </div>
+
+        <!-- Categoría -->
+
+        <div class="mb-3">
+
+            <label class="form-label">
+
+                Categoría
+
+            </label>
+
+            <select
+                id="categoria"
+                class="form-select">
+
+                <option value="">
+                    Seleccione una categoría
+                </option>
+
+                <option>
+                    Sensor IoT
+                </option>
+
+                <option>
+                    Motor Industrial
+                </option>
+
+                <option>
+                    PLC
+                </option>
+
+                <option>
+                    Robot Industrial
+                </option>
+
+            </select>
+
+            <div id="errorCategoria" class="small mt-1"></div>
+
+        </div>
+
+        <button
+           type="submit"
+            class="btn btn-primary w-100">
+
+        <span 
+            id="spinner"
+            class="spinner-border spinner-border-sm d-none">
+        </span>
+
+            Registrar
+
+        </button>
+
+    </form>
+
+    <!-- ============================================== -->
+    <!-- MENSAJES DINÁMICOS                             -->
+    <!-- ============================================== -->
+
+    <div id="mensaje" class="mt-3"></div>
+
+
+    <!-- Spinner de carga -->
+<div id="spinnerCarga" class="text-center my-3 d-none">
+
+    <div class="spinner-border text-primary"
+         role="status">
+
+        <span class="visually-hidden">
+            Cargando...
+        </span>
+
+    </div>
+
+    <p>
+        Procesando registro...
+    </p>
+
+</div>
+
+
+    <!-- ============================================== -->
+    <!-- CONTADOR DINÁMICO                              -->
+    <!-- ============================================== -->
+
+    <h4 class="mt-4">
+
+        Total de registros:
+
+        <span id="contador">
+
+            0
+
+        </span>
+
+    </h4>
+
+    <!-- ============================================== -->
+    <!-- CONTENIDO DINÁMICO                             -->
+    <!-- JavaScript renderizará tarjetas utilizando     -->
+    <!-- arreglos, objetos y estructuras repetitivas    -->
+    <!-- ============================================== -->
+
+    <div
+        id="listaRegistros"
+        class="mt-3">
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- INFORMACIÓN ADICIONAL                                 -->
+<!-- Esta sección puede reutilizarse como un componente     -->
+<!-- informativo dentro de la aplicación Flask             -->
+<!-- ===================================================== -->
+
+<aside class="p-3 bg-dark text-white rounded mb-4">
+
+    <h3>Información adicional</h3>
+
+    <p>
+        SmartPredict AI es un proyecto académico desarrollado para demostrar el uso
+        de Inteligencia Artificial, Internet de las Cosas (IoT) y Automatización
+        Industrial en aplicaciones de mantenimiento predictivo.
+    </p>
+
+    <p>
+        La estructura del proyecto ha sido organizada para facilitar su futura
+        migración a Flask, permitiendo reutilizar componentes como encabezado,
+        navegación, contenido principal y pie de página mediante plantillas.
+    </p>
+
+</aside>
+
+</main>
+
+<!-- ===================================================== -->
+<!-- FIN DEL CONTENIDO PRINCIPAL                           -->
+<!-- ===================================================== -->
+
+
+
+<!-- ===================================================== -->
+<!-- INICIO FOOTER                                         -->
+<!-- FUTURA PLANTILLA: footer.html                         -->
+<!-- Información compartida por todas las páginas          -->
+<!-- ===================================================== -->
+
+<footer id="contacto" class="text-center p-3 bg-dark text-white">
+
+    <h5>SmartPredict AI</h5>
+
+    <p>
+        Proyecto Integrador - Desarrollo de Aplicaciones Web
+    </p>
+
+    <p>
+        Desarrollado por: <strong>Diego Chitupanta</strong>
+    </p>
+
+    <p>
+        Ingeniería en Tecnologías de la Información
+    </p>
+
+    <p>
+        Universidad Estatal Amazónica
+    </p>
+
+    <p>
+        © 2026 - Todos los derechos reservados.
+    </p>
+
+</footer>
+
+<!-- FIN FOOTER -->
+
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS COMPARTIDOS                                   -->
+<!-- En Flask estos archivos se cargarán desde base.html   -->
+<!-- ===================================================== -->
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ============================= -->
+<!-- MODAL DETALLE DE REGISTRO -->
+<!-- ============================= -->
+
+<div class="modal fade"
+     id="modalDetalle"
+     tabindex="-1">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header bg-dark text-white">
+
+                <h5 class="modal-title">
+
+                    Detalle del registro
+
+                </h5>
+
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <h5 id="detalleNombre"></h5>
+
+                <p id="detalleDescripcion"></p>
+
+                <p>
+
+                    <strong>Categoría:</strong>
+
+                    <span id="detalleCategoria"></span>
+
+                </p>
+
+
+                <p>
+
+                    <strong>Estado:</strong>
+
+                    <span id="detalleEstado"></span>
+
+                </p>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                    Cerrar
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- JavaScript propio -->
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
