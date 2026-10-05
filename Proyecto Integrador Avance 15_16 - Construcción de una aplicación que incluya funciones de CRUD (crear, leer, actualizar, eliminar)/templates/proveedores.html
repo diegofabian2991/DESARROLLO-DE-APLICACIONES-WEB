@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h1 class="mb-4">Proveedores</h1>
+
+    <a href="{{ url_for('formulario_proveedor') }}" class="btn btn-primary mb-4">
+        Registrar proveedor
+    </a>
+
+    <p class="mb-4">
+        Registro de proveedores especializados en tecnologías industriales.
+    </p>
+
+    {% if proveedores %}
+
+        <div class="row">
+
+            {% for proveedor in proveedores %}
+
+                <div class="col-md-6 col-lg-4 mb-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <div class="card-body">
+
+                            <h4 class="card-title">
+                                {{ proveedor.nombre }}
+                            </h4>
+
+                            <p class="card-text">
+                                <strong>ID:</strong>
+                                {{ proveedor.id_proveedor }}
+                            </p>
+
+                            <p class="card-text">
+                                <strong>Especialidad:</strong>
+                                {{ proveedor.especialidad }}
+                            </p>
+
+                            <p class="card-text">
+                                <strong>Correo:</strong>
+                                {{ proveedor.email }}
+                            </p>
+
+                            <div class="mt-3">
+
+                                <a href="{{ url_for('editar_proveedor', id_proveedor=proveedor.id_proveedor) }}"
+                                   class="btn btn-warning">
+                                    Editar
+                                </a>
+
+                                <form method="POST"
+                                      action="{{ url_for('eliminar_proveedor', id_proveedor=proveedor.id_proveedor) }}"
+                                      style="display:inline;"
+                                      onsubmit="return confirm('¿Está seguro de eliminar este proveedor?');">
+
+                                    <button type="submit" class="btn btn-danger">
+                                        Eliminar
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+
+        <div class="alert alert-info">
+            No existen proveedores registrados.
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - SmartPredict AI{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow">
+        <div class="card-body text-center">
+
+            <h1 class="mb-3">
+                Bienvenido a SmartPredict AI
+            </h1>
+
+            <p class="lead">
+                Has iniciado sesión correctamente.
+            </p>
+
+            <p>
+                Usuario autenticado:
+                <strong>{{ current_user.usuario }}</strong>
+            </p>
+
+            <hr>
+
+            <p class="text-muted">
+                Desde este panel puedes acceder a las funcionalidades
+                del sistema de gestión.
+            </p>
+
+            <a href="{{ url_for('logout') }}" class="btn btn-danger">
+                Cerrar sesión
+            </a>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
